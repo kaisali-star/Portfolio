@@ -2370,7 +2370,7 @@ footer .text{
   }
 }
 
-/* ___________________ 768px Screens ______________________ */
+/* ___________________ 500px Screens ______________________ */
 @media (max-width: 500px) {
   .container {
     padding: 0 1 rem;
@@ -2484,6 +2484,31 @@ footer .text{
   color: var(--heading-color);
 }
 
+
+
+
+/*  300px */
+@media only screen and (max-width:450px)
+ {
+  
+  body{
+          --section-padding : 0;
+     }
+     .showcase-area{
+       padding: 1rem;
+     }
+     .box-desc{
+       display: block;
+     }
+  .box-desc .btn{
+    display: none;
+  }
+  footer .text{
+    display: none;
+  }
+
+
+}
 @-webkit-keyframes opacity {
   0%, 100% {
     opacity: 0;
@@ -2540,3 +2565,4 @@ footer .text{
     transform: translate3d(0, -25%, 0);
   }
 }
+
