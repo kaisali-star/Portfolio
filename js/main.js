@@ -2,8 +2,7 @@ const header = document.querySelector("header");
 const first_skill = document.querySelector(".skill:first-child");
 const sk_counters = document.querySelectorAll(".counter span");
 const progress_bars = document.querySelectorAll(".skills svg circle");
-const ml_section = document.querySelector(".milestones");
-const ml_counters = document.querySelectorAll(".number span");
+
 
 const prt_section = document.querySelector(".portfolio");
 const zoom_icons = document.querySelectorAll(".zoom-icon");
@@ -31,7 +30,7 @@ el.addEventListener("mousemove", (e) => {
 window.addEventListener("scroll", () => {
   activeLink();
   if (!skillsPlayed) skillsCounter();
-  if (!mlPlayed) mlCounter();
+  // if (!mlPlayed) mlCounter();
 });
 
 function updateCount(num, maxNum) {
@@ -64,8 +63,9 @@ sr.reveal(".showcase-image", { origin: "top", delay: 700 });
 /* _______________________ skills Progress Bar Animation __________________________ */
 
 function hasReached(el) {
+  console.log(el.getBoundingClientRect().y)
   if(!el) return
-  if (el.getBoundingClientRect().y <= -580 || null) {
+  if (el.getBoundingClientRect().y <= 400 || null) {
     return true;
   } else {
     return false;
@@ -94,19 +94,19 @@ function skillsCounter() {
 
 /* _______________________ Service Counter Reveal __________________________ */
 
-let mlPlayed = false;
+// let mlPlayed = false;
 
-function mlCounter() {
-  if (!hasReached(ml_section)) return;
-  mlPlayed = true;
-  ml_counters.forEach((ctr) => {
-    let target = +ctr.dataset.target;
+// function mlCounter() {
+//   if (!hasReached(ml_section)) return;
+//   mlPlayed = true;
+//   ml_counters.forEach((ctr) => {
+//     let target = +ctr.dataset.target;
 
-    setTimeout(() => {
-      updateCount(ctr, target);
-    }, 400);
-  });
-}
+//     setTimeout(() => {
+//       updateCount(ctr, target);
+//     }, 400);
+//   });
+// }
 
 /* _______________________ Portfolio Flter animation  __________________________ */
 
@@ -176,11 +176,11 @@ const swiper = new Swiper(".swiper", {
 /* _______________________  Change active link on scroll  __________________________ */
 
 function activeLink() {
-  let sections = document.querySelectorAll("section[id");
+  let sections = document.querySelectorAll("section[id]");
   let passedSections = Array.from(sections)
     .map((sct, i) => {
       return {
-        y: sct.getBoundingClientRect().top - header.offsetHeight,
+        y: sct.getBoundingClientRect().top - header.offsetHeight -50,
         id: i,
       };
     })
