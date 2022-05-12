@@ -2500,7 +2500,13 @@ footer .text{
   .box-desc .btn{
     display: none;
   }
+  footer .container{
+    justify-content: center;
+  }
   footer .text{
+    display: none;
+  }
+  footer .logo{
     display: none;
   }
 
