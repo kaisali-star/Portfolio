@@ -1459,8 +1459,9 @@ body.open .hamburger .bar:last-child {
   color: #fff;
   font-size: 2rem;
   cursor: pointer;
-  padding: 2rem;
+  text-align: center;
 }
+
 
 .slider-wrap img.showImage {
   display: block;
@@ -2420,23 +2421,18 @@ footer .text{
     margin-top: 1rem;
   }
   .portfolio .slider-wrap {
-    width: calc(100%-2rem);
+    width: 90%;
     grid-template-columns: 50px 1fr 50px;
   }
-  .images {
+  /* .images {
     grid-column: 1/4;
     grid-row: 1/2;
-  }
+  } */
   .images-details {
     grid-column: 1/4;
     grid-row: 1/2;
   }
-  .prev-btn {
-    grid-column: 3/4;
-    grid-row: 1/2;
-    z-index: 1;
-    color: #333;
-  }
+
   .contact-form p {
     font-size: 1.2rem;
   }
@@ -2493,6 +2489,10 @@ footer .text{
      }
      .showcase-area{
        padding: 1rem;
+     }
+   
+     .about .text{
+       width: 93%;
      }
      .box-desc{
        display: block;
