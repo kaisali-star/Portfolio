@@ -1866,7 +1866,7 @@ textarea.form-input {
 
 .contact-form .social-media {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(3,1fr);
   gap: 3rem;
 }
 
@@ -1891,6 +1891,7 @@ textarea.form-input {
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
+  overflow: hidden;
 }
 .contact-form .social-link img{
   width: 4rem;
@@ -1906,6 +1907,11 @@ textarea.form-input {
   -o-transform: scale(1.7);
 }
 
+.fa-linkedin{
+  font-size: 5rem;
+
+
+}
 /* ___________________ footer section Styling ______________________ */
 
 footer {
@@ -1932,6 +1938,7 @@ footer .social-media {
 footer .text{
   margin:  0;
 }
+
 .social-link {
   width: 35px;
   height: 35px;
@@ -1940,7 +1947,7 @@ footer .text{
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-  margin-left: 1rem;
+  margin: 0 1rem;
   background-color: var(--bg-color-2);
   color: var(--text-color);
   display: flex;
@@ -2029,7 +2036,7 @@ footer .text{
     column-gap: 2.5rem;
   }
   .contact {
-    margin-bottom: 1rem;
+    margin: 4rem 0 6rem;
     padding-bottom: 0px;
   }
   .contact .container {
@@ -2391,7 +2398,7 @@ footer .text{
     padding: 3rem 2.5rem;
   }
   .skills-wrap {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     row-gap: 1.5rem;
   }
 
@@ -2509,6 +2516,12 @@ footer .text{
   footer .logo{
     display: none;
   }
+  footer .social-media {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    padding: 0.8rem 0.8rem ;
+}
 
 
 }
@@ -2568,4 +2581,14 @@ footer .text{
     transform: translate3d(0, -25%, 0);
   }
 }
+.contact-form .social-media {
+  gap: 1rem;
 
+  
+}
+.contact-form {
+  padding: 1rem 0;
+}
+.contact-info{
+  height: 8rem;
+}
